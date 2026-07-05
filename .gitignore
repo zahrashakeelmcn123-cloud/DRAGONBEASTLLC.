@@ -3,8 +3,10 @@
 *.png
 *.jpg
 
-# Keep the zayn/ directory structure
-!zayn/
+# Keep images in the zayn/ folder
+!zayn/*.jpeg
+!zayn/*.png
+!zayn/*.jpg
 
 # Keep hero section images in root if needed
 !hero section 1.PNG
