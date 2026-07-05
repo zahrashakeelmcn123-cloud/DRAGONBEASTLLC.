@@ -1,0 +1,18 @@
+# Exclude duplicate images in root directory (keep organized zayn/ folder)
+*.jpeg
+*.png
+*.jpg
+
+# Keep the zayn/ directory structure
+!zayn/
+
+# Keep hero section images in root if needed
+!hero section 1.PNG
+!hero section 2.jpeg
+
+# Exclude VS Code settings
+.vscode/
+
+# Exclude common system files
+.DS_Store
+Thumbs.db
