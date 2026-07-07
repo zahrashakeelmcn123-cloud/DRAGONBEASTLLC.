@@ -67,11 +67,10 @@
     </header>
     <main class="pb-20">
         <section class="relative isolate overflow-hidden bg-card text-foreground">
-            <div class="relative w-full">
+            <div class="relative w-full cursor-pointer" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">
                 <img id="heroImage1" src="hero_1.png" alt="Leatherwear manufacturing" class="w-full h-auto object-contain transition-opacity duration-1000" loading="lazy">
                 <img id="heroImage2" src="hero_2.jpeg" alt="Leatherwear manufacturing" class="absolute inset-0 w-full h-auto object-contain opacity-0 transition-opacity duration-1000" loading="lazy">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20"></div>
         </section>
         <section class="bg-background border-y border-border/60 py-16">
             <div class="container-luxe">
@@ -102,7 +101,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-background border-y border-border/60 py-16">
+        <section id="catalog" class="bg-background border-y border-border/60 py-16">
             <div class="container-luxe">
                 <div class="mb-10 max-w-3xl">
                     <p class="text-[10px] uppercase tracking-[0.3em] text-foreground/55 mb-4">Leatherwear catalog</p>
