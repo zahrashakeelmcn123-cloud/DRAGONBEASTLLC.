@@ -703,10 +703,10 @@
                 
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <div class="grid grid-cols-2 gap-2 mb-4">
+                        <div id="modalImagesContainer" class="grid grid-cols-2 gap-2 mb-4">
                             <img id="modalImage1" src="" alt="Product image 1" class="rounded-xl w-full aspect-square object-contain">
-                            <img id="modalImage2" src="" alt="Product image 2" class="rounded-xl w-full aspect-square object-contain">
-                            <img id="modalImage3" src="" alt="Product image 3" class="rounded-xl w-full aspect-square object-contain">
+                            <img id="modalImage2" src="" alt="Product image 2" class="rounded-xl w-full aspect-square object-contain hidden">
+                            <img id="modalImage3" src="" alt="Product image 3" class="rounded-xl w-full aspect-square object-contain hidden">
                             <img id="modalImage4" src="" alt="Product image 4" class="rounded-xl w-full aspect-square object-contain hidden">
                         </div>
                     </div>
@@ -1269,6 +1269,16 @@
             const modalImage2 = document.getElementById('modalImage2');
             const modalImage3 = document.getElementById('modalImage3');
             const modalImage4 = document.getElementById('modalImage4');
+            const modalImagesContainer = document.getElementById('modalImagesContainer');
+            
+            // Adjust grid layout based on number of images
+            if (product.images.length === 1) {
+                modalImagesContainer.classList.remove('grid-cols-2');
+                modalImagesContainer.classList.add('grid-cols-1');
+            } else {
+                modalImagesContainer.classList.remove('grid-cols-1');
+                modalImagesContainer.classList.add('grid-cols-2');
+            }
             
             if (product.images.length >= 2) {
                 modalImage2.src = product.images[1];
