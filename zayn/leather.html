@@ -70,6 +70,7 @@
             <div class="relative w-full cursor-pointer" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">
                 <img id="heroImage1" src="hero_1.png" alt="Leatherwear manufacturing" class="w-full h-auto object-contain transition-opacity duration-1000" loading="lazy">
                 <img id="heroImage2" src="hero_2.jpeg" alt="Leatherwear manufacturing" class="absolute inset-0 w-full h-auto object-contain opacity-0 transition-opacity duration-1000" loading="lazy">
+                <img id="heroImage3" src="hero_3.jpeg" alt="Leatherwear manufacturing" class="absolute inset-0 w-full h-auto object-contain opacity-0 transition-opacity duration-1000" loading="lazy">
             </div>
         </section>
         <section class="bg-background border-y border-border/60 py-16">
@@ -1323,15 +1324,23 @@
         let currentHeroImage = 1;
         const heroImage1 = document.getElementById('heroImage1');
         const heroImage2 = document.getElementById('heroImage2');
+        const heroImage3 = document.getElementById('heroImage3');
         
         setInterval(() => {
             if (currentHeroImage === 1) {
                 heroImage1.classList.remove('opacity-0');
                 heroImage2.classList.add('opacity-0');
+                heroImage3.classList.add('opacity-0');
                 currentHeroImage = 2;
-            } else {
+            } else if (currentHeroImage === 2) {
                 heroImage1.classList.add('opacity-0');
                 heroImage2.classList.remove('opacity-0');
+                heroImage3.classList.add('opacity-0');
+                currentHeroImage = 3;
+            } else {
+                heroImage1.classList.add('opacity-0');
+                heroImage2.classList.add('opacity-0');
+                heroImage3.classList.remove('opacity-0');
                 currentHeroImage = 1;
             }
         }, 3000);
