@@ -156,9 +156,11 @@
 
     <main class="pb-20">
 
-        <section class="relative isolate min-h-[60vh] md:min-h-[88vh] overflow-hidden bg-card text-foreground">
+        <section class="relative isolate overflow-hidden bg-card text-foreground">
 
-            <img src="active hero section.jpeg" alt="Activewear manufacturing" class="absolute inset-0 h-full w-full object-cover object-center" loading="lazy">
+            <div class="relative w-full cursor-pointer" onclick="document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})">
+                <img src="active hero section.jpeg" alt="Activewear manufacturing" class="w-full h-auto object-contain" loading="lazy">
+            </div>
 
         </section>
 
@@ -220,7 +222,7 @@
 
         </section>
 
-        <section class="bg-background border-y border-border/60 py-16">
+        <section id="catalog" class="bg-background border-y border-border/60 py-16">
 
             <div class="container-luxe">
 
